@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("product")
+@Document("products")
 public class ProductStock {
 
         @Id
@@ -12,17 +12,12 @@ public class ProductStock {
 
         @Indexed(unique = true)
         private String name;
-        private int quantityParsed;
+        private int QuantityParsed;
         private String storeId;
         private String ITEM_ID;
         
-        public ProductStock(String id, String name, int quantityParsed, String storeId, String ITEM_ID) {
+        public ProductStock() {
             super();
-            this.id = id;
-            this.name = name;
-            this.quantityParsed = quantityParsed;
-            this.storeId = storeId;
-            this.ITEM_ID = ITEM_ID;
         }
 
         public String getStoreId() {
@@ -34,11 +29,11 @@ public class ProductStock {
         }
 
         public int getQuantityParsed() {
-            return quantityParsed;
+            return QuantityParsed;
         }
 
-        public void setQuantityParsed(int quantityParsed) {
-            this.quantityParsed = quantityParsed;
+        public void setQuantityParsed(int QuantityParsed) {
+            this.QuantityParsed = QuantityParsed;
         }
 
         public String getITEM_ID() {

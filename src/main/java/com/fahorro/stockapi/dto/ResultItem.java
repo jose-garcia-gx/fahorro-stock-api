@@ -3,43 +3,43 @@ package com.fahorro.stockapi.dto;
 import java.util.Date;
 
 public class ResultItem {
-    private String _id;
+    private String id;
 
-    private int _availableQty;
+    private int availableQty;
 
-    public Date _updateDate;
+    public Date updateDate;
 
     public ResultItem() {
 
     }
 
     public ResultItem(String id, int availableQty) {
-        _id = id;
-        _availableQty = availableQty;
+        this.id = id;
+        this.availableQty = availableQty;
     }
 
     public String getId() {
-        return _id;
+        return id;
     }
 
     public void setId(String id){
-        _id = id;
+        this.id = id;
     }
 
     public int getAvailableQty() {
-        return _availableQty;
+        return availableQty;
     }
 
     public void setAvailableQty(int availableQty){
-        _availableQty = availableQty;
+        this.availableQty = availableQty;
     }
 
     public Date getUpdateDate() {
-        return _updateDate;
+        return updateDate;
     }
 
     public void setUpdateDate(Date updateDate) {
-        _updateDate = updateDate;
+        this.updateDate = updateDate;
     }
 
 }

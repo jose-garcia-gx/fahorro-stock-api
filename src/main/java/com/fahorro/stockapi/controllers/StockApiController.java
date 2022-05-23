@@ -28,7 +28,11 @@ public class StockApiController {
     @RequestMapping(value = "/existencias", method = RequestMethod.POST, produces = "application/json")
     public ResponseEntity<StockResult> postExistencias(@RequestBody StockQuery query)
     {
-        var res = stockService.getProductStock(query);
-        return ResponseEntity.ok(res);
+        try{
+            var res = stockService.getProductStock(query);
+            return ResponseEntity.ok(res);
+        } catch(Exception err) {
+            throw err;
+        }
     }
 }
